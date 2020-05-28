@@ -26,7 +26,7 @@ function post_message(url: string, request: any) {
 
 const request = {
     "username": bot_name,
-    "content":"サーバーが起動したかどうかは分かりません",
+    "content":Deno.args[0],
     "embeds":[
         {
             "title": server_name,
