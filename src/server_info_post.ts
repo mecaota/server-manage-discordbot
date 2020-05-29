@@ -7,10 +7,10 @@ const bot_name = config().BOT_NAME || "";
 const server_name = config().SERVER_NAME || "";
 const server_address = config().SERVER_ADDRESS || "";
 
-function make_request_uri(endpoint: string, webhook_id: string, webhook_token: string): string {
+export function make_request_uri(endpoint: string, webhook_id: string, webhook_token: string): string {
     return `https://${endpoint}/webhooks/${webhook_id}/${webhook_token}`;
 }
-function post_message(url: string, request: any) {
+export function post_message(url: string, request: any) {
     const body = JSON.stringify(request)
     fetch(
         url,
